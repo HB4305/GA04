@@ -165,7 +165,7 @@ export default function Todos() {
             Những việc hiện tại:
           </h2>
 
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-left">
             {todos.length === 0 ? (
               <li className="text-center py-16 bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border-2 border-dashed border-blue-300">
                 <div className="text-7xl mb-4 animate-pulse"><i className="fas fa-clipboard-list"></i></div>
@@ -176,25 +176,22 @@ export default function Todos() {
               todos.map((item) => (
                 <li
                   key={item.id}
-                  className={`group relative flex items-center gap-4 p-5 bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border-l-4 ${
-                    item.completed
-                      ? "border-green-500 bg-gray-50"
-                      : "border-blue-500"
-                  }`}
+                  className={`group relative flex items-center gap-4 p-5 bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border-l-4 ${item.completed
+                    ? "border-green-500 bg-gray-50"
+                    : "border-blue-500"
+                    }`}
                 >
-                  <span className={`flex-1 text-lg font-medium ${
-                    item.completed ? "line-through text-gray-400" : "text-gray-800"
-                  }`}>
+                  <span className={`flex-1 text-lg font-medium ${item.completed ? "line-through text-gray-400" : "text-gray-800"
+                    }`}>
                     {item.title}
                   </span>
                   <div className="flex gap-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     <button
                       type="button"
-                      className={`px-5 py-2.5 ${
-                        item.completed
-                          ? "bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700"
-                          : "bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700"
-                      } text-white text-sm font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl`}
+                      className={`px-5 py-2.5 ${item.completed
+                        ? "bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700"
+                        : "bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700"
+                        } text-white text-sm font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl`}
                       onClick={() => handleToggleCompleted(item.id, item.completed)}
                     >
                       {item.completed ? (

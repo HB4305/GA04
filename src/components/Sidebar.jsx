@@ -21,7 +21,7 @@ export default function Sidebar({ isSidebarOpen, toggleSidebar }) {
             className={`fixed lg:sticky top-0 flex flex-col w-64 bg-white shadow-xl p-8 h-screen z-40
                   overflow-y-auto transition-transform duration-300
                   ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0
-                  border-r border-gray-400`} // Dùng state để điều khiển
+                  border-r border-gray-100`} // Dùng state để điều khiển
         >
             <div className="flex-1 mt-12 md:mt-0">
                 <h2 className="text-3xl font-bold text-blue-600 mb-8">Bảng chọn</h2>

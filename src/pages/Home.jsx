@@ -4,7 +4,7 @@ export default function Home() {
     const message = "Chào mừng đến với ứng dụng!";
 
     return (
-        <div className="bg-white shadow-2xl rounded-3xl p-6 md:p-10 max-w-lg w-full transition-transform hover:scale-[1.02] border border-gray-400">
+        <div className="bg-white shadow-2xl rounded-3xl p-6 md:p-10 max-w-lg w-full transition-transform hover:scale-[1.02] border border-gray-100">
             <h1 className="text-3xl md:text-5xl font-extrabold text-blue-700 mb-4">
                 {message}
             </h1>
