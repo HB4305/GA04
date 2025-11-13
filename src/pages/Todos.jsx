@@ -6,12 +6,21 @@ export default function Todos() {
   const [newTitle, setNewTitle] = useState(""); // Thêm state cho input
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos")
-      .then((response) => response.json())
-      .then((data) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+
+        const data = await response.json();
+
         setTodos(data.slice(0, 10));
         setLoading(false);
-      });
+      } catch (error) {
+        console.error("Fetch error:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const handleToggleCompleted = async (id, completed) => {
