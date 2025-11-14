@@ -217,7 +217,7 @@ export default function Todos() {
                   <div className="flex gap-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     <button
                       type="button"
-                      className={`px-5 py-2.5 ${
+                      className={`px-5 py-2.5 min-w-[110px] ${
                         item.completed
                           ? "bg-linear-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700"
                           : "bg-linear-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700"
@@ -238,7 +238,7 @@ export default function Todos() {
                     </button>
                     <button
                       type="button"
-                      className="px-5 py-2.5 bg-linear-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white text-sm font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                      className="px-5 py-2.5 min-w-[110px] bg-linear-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white text-sm font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
                       onClick={() => RemoveTask(item.id)}
                     >
                       <i className="fas fa-trash mr-1"></i>Xóa
